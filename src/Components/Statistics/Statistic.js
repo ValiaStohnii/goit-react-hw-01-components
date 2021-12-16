@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Statistic = ({ title, stats }) => {
   return (
     <section class="statistics">
@@ -24,4 +26,10 @@ const Statistic = ({ title, stats }) => {
     </section>
   );
 };
+
+Statistic.propTypes = {
+  title: PropTypes.array,
+  stats: PropTypes.array,
+};
+
 export default Statistic;

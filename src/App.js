@@ -13,12 +13,12 @@ export default function App() {
         location={user.location}
         avatar={user.avatar}
         followers={user.stats.followers}
-        views={user.stats.followers}
-        likes={user.stats.followers}
+        views={user.stats.views}
+        likes={user.stats.likes}
       />
-      ;
-      <Statistic title={data.label} stats={data.percentage} />;
-      <Statistic stats={data.percentage} />;
+      {data.map(statistic => (
+        <Statistic title={statistic.label} stats={statistic.percentage} />
+      ))}
     </div>
   );
 }
