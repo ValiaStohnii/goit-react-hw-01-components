@@ -3,21 +3,7 @@ import PropTypes from 'prop-types';
 const Statistic = ({ title, stats }) => {
   return (
     <section class="statistics">
-      <h2 class="title">Upload stats</h2>
-
       <ul class="stat-list">
-        <li class="item">
-          <span class="label">{title}</span>
-          <span class="percentage">{stats}</span>
-        </li>
-        <li class="item">
-          <span class="label">{title}</span>
-          <span class="percentage">{stats}</span>
-        </li>
-        <li class="item">
-          <span class="label">{title}</span>
-          <span class="percentage">{stats}</span>
-        </li>
         <li class="item">
           <span class="label">{title}</span>
           <span class="percentage">{stats}</span>
@@ -28,8 +14,8 @@ const Statistic = ({ title, stats }) => {
 };
 
 Statistic.propTypes = {
-  title: PropTypes.array,
-  stats: PropTypes.array,
+  title: PropTypes.string,
+  stats: PropTypes.number,
 };
 
 export default Statistic;
