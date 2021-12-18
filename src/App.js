@@ -1,4 +1,5 @@
 import './App.css';
+import { Title } from './App.styled';
 import Profile from './Components/Profile/Profile';
 import user from './Components/Profile/user.json';
 import Statistic from './Components/Statistics/Statistic';
@@ -19,7 +20,7 @@ export default function App() {
         views={user.stats.views}
         likes={user.stats.likes}
       />
-      <h2 class="title">Upload stats</h2>
+      <Title class="title">Upload stats</Title>
       {data.map(statistic => (
         <Statistic key={statistic.id} title={statistic.label} stats={statistic.percentage} />
       ))}
