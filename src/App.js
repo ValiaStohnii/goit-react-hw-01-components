@@ -1,5 +1,5 @@
 import './App.css';
-import { Title } from './App.styled';
+import { Title, StatList } from './App.styled';
 import Profile from './Components/Profile/Profile';
 import user from './Components/Profile/user.json';
 import Statistic from './Components/Statistics/Statistic';
@@ -20,10 +20,12 @@ export default function App() {
         views={user.stats.views}
         likes={user.stats.likes}
       />
-      <Title class="title">Upload stats</Title>
-      {data.map(statistic => (
-        <Statistic key={statistic.id} title={statistic.label} stats={statistic.percentage} />
-      ))}
+      <Title>Upload stats</Title>
+      <StatList>
+        {data.map(statistic => (
+          <Statistic key={statistic.id} title={statistic.label} stats={statistic.percentage} />
+        ))}
+      </StatList>
       <FriendList />
 
       <table class="transaction-history">
