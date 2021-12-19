@@ -11,3 +11,11 @@ export const StatList = styled.ul`
   display: flex;
   justify-content: center;
 `;
+
+export const TransHistory = styled.table`
+  border: 2px solid green;
+`;
+
+export const TransTableHead = styled.th`
+  border: 2px solid green;
+`;

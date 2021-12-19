@@ -6,7 +6,7 @@ const FriendsListItem = ({ avatar, name, isOnline }) => {
     <FriendsItem>
       <FriendsStatus isOnline={isOnline}></FriendsStatus>
       <FriendsAvatar src={avatar} alt="User avatar" width="48" />
-      <p class="name">{name}</p>
+      <p>{name}</p>
     </FriendsItem>
   );
 };

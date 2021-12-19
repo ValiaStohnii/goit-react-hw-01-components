@@ -1,5 +1,5 @@
 import './App.css';
-import { Title, StatList } from './App.styled';
+import { Title, StatList, TransHistory, TransTableHead } from './App.styled';
 import Profile from './Components/Profile/Profile';
 import user from './Components/Profile/user.json';
 import Statistic from './Components/Statistics/Statistic';
@@ -28,12 +28,12 @@ export default function App() {
       </StatList>
       <FriendList />
 
-      <table class="transaction-history">
+      <TransHistory>
         <thead>
           <tr>
-            <th>Type</th>
-            <th>Amount</th>
-            <th>Currency</th>
+            <TransTableHead>Type</TransTableHead>
+            <TransTableHead>Amount</TransTableHead>
+            <TransTableHead>Currency</TransTableHead>
           </tr>
         </thead>
 
@@ -42,7 +42,7 @@ export default function App() {
             <TransactionHistory key={transactions.id} items={transactions} />
           ))}
         </tbody>
-      </table>
+      </TransHistory>
     </div>
   );
 }
