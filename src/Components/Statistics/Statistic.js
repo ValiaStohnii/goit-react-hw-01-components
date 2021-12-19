@@ -5,7 +5,7 @@ const Statistic = ({ title, stats }) => {
   return (
     <StatIlem>
       <Label>{title}</Label>
-      <span class="percentage">{stats}%</span>
+      <span>{stats}%</span>
     </StatIlem>
   );
 };
