@@ -27,7 +27,6 @@ export default function App() {
         ))}
       </StatList>
       <FriendList />
-
       <TransHistory>
         <thead>
           <tr>
@@ -36,7 +35,6 @@ export default function App() {
             <TransTableHead>Currency</TransTableHead>
           </tr>
         </thead>
-
         <tbody>
           {transactions.map(transactions => (
             <TransactionHistory key={transactions.id} items={transactions} />
