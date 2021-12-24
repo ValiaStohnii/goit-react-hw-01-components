@@ -1,5 +1,11 @@
 import styled from '@emotion/styled';
 
+export const StatList = styled.ul`
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+`;
+
 export const StatIlem = styled.li`
   list-style: none;
   padding: 10px;
