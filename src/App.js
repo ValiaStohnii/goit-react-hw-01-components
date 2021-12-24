@@ -1,10 +1,10 @@
 import './App.css';
-import { TransHistory, TransTableHead } from './App.styled';
 import Profile from './Components/Profile/Profile';
 import user from './Components/Profile/user.json';
 import StatisticList from './Components/Statistics/StatisticList';
 import data from './Components/Statistics/data.json';
 import FriendList from './Components/FriendList/FriendList';
+import friends from './Components/FriendList/friends.json';
 import TransactionHistory from './Components/Transaction/TransactionHistory';
 import transactions from './Components/Transaction/transactions.json';
 
@@ -23,22 +23,9 @@ export default function App() {
 
       <StatisticList stats={data} />
 
-      <FriendList />
+      <FriendList friends={friends} />
 
-      <TransHistory>
-        <thead>
-          <tr>
-            <TransTableHead>Type</TransTableHead>
-            <TransTableHead>Amount</TransTableHead>
-            <TransTableHead>Currency</TransTableHead>
-          </tr>
-        </thead>
-        <tbody>
-          {transactions.map(transactions => (
-            <TransactionHistory key={transactions.id} items={transactions} />
-          ))}
-        </tbody>
-      </TransHistory>
+      <TransactionHistory items={transactions} />
     </div>
   );
 }
