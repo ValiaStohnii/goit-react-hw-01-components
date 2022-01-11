@@ -1,7 +1,18 @@
 import styled from '@emotion/styled';
 
-export const StatList = styled.ul`
+export const StatSection = styled.section`
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+export const StatTitle = styled.h2`
+  margin: 0;
+`;
+
+export const StatList = styled.ul`
+  margin-top: 5px;
   display: flex;
   justify-content: center;
 `;
