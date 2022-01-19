@@ -23,6 +23,8 @@ export default function App() {
 
       <StatisticList title="Upload stats" stats={data} />
 
+      <StatisticList stats={data} />
+
       <FriendList friends={friends} />
 
       <TransactionHistory items={transactions} />

@@ -4,7 +4,7 @@ import { StatSection, StatTitle, StatList, StatIlem, Label } from './Statistics.
 const StatisticList = ({ title, stats }) => {
   return (
     <StatSection>
-      <StatTitle>{title}</StatTitle>
+      {title ? <StatTitle>{title}</StatTitle> : false}
       <StatList>
         {stats.map(({ id, label, percentage }) => (
           <StatIlem key={id}>
